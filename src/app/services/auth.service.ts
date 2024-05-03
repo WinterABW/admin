@@ -6,6 +6,7 @@ import { UserModel } from '../models/user';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CredentialsService } from './credentials.service';
 import { environment } from 'src/environments/environment';
+declare var require: any
 var CryptoJS = require("crypto-js");
 
 const baseUrlv2=environment.baseUrlv2

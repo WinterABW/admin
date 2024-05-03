@@ -1,34 +1,28 @@
-<div class="blank-layout-container justify-content-center align-items-center bg-light-primary">
-  <div class="position-relative row w-100 h-100 bg-gredient justify-content-center">
-    <div class="col-lg-4 d-flex align-items-center">
-      <mat-card class="cardWithShadow boxed-auth">
-        <mat-card-content class="p-32">
-          <div class="text-center">
-            <a [routerLink]="['/dashboard']">
-              <img src="./assets/icons/icon-72x72.png" class="align-middle m-2" alt="logo" />
-            </a>
+<section class="bg-gray-50">
+  <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+    <div class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
+      <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+        <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
+          Inicio de sesión
+        </h1>
+        <form class="space-y-4 md:space-y-6" (ngSubmit)="login()" [formGroup]="loginForm">
+          <div>
+            <label for="user" class="block mb-2 text-sm font-medium text-gray-900">Usuario</label>
+            <input type="text" name="user" id="user"
+              class="bg-gray-50 border-2 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+              placeholder="Esciba su nombre de usuario" formControlName="username">
           </div>
-
-          <div class="or-border m-t-30">Administración Picta</div>
-
-          <form (ngSubmit)="login()" [formGroup]="loginForm" class="m-t-30">
-            <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">Usuario:</mat-label>
-            <mat-form-field appearance="outline" class="w-100" color="primary">
-              <input formControlName="username" matInput />
-            </mat-form-field>
-            <!-- password -->
-            <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">Contraseña:</mat-label>
-            <mat-form-field appearance="outline" class="w-100" color="primary">
-              <input formControlName="password" matInput type="password" />
-            </mat-form-field>
-
-            <button mat-flat-button color="primary" class="w-100">
-              Entrar
-            </button>
-            <!-- input -->
-          </form>
-        </mat-card-content>
-      </mat-card>
+          <div>
+            <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Contraseña</label>
+            <input type="password" name="password" id="password" placeholder="••••••••"
+              class="bg-gray-50 border-2 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+              formControlName="password">
+          </div>
+          <button type="submit"
+            class="w-full text-gray-900 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+            Entrar</button>
+        </form>
+      </div>
     </div>
   </div>
-</div>
+</section>

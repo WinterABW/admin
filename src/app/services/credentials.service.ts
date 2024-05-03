@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+declare var require: any
 var CryptoJS = require("crypto-js");
 export interface Credentials {
   user?: any;
