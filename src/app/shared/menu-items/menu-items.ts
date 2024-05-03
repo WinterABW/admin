@@ -8,6 +8,7 @@ export interface Menu {
 }
 
 const MENUITEMS = [
+  { state: 'security', name: 'Seguridad', type: 'link', icon: 'security' },
   { state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'av_timer' },
   { state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },
   { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },

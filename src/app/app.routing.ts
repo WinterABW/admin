@@ -8,8 +8,7 @@ export const AppRoutes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    canActivate: [UnauthGuard]
-  },,
+  },
   {
     path: '',
     component: FullComponent,
@@ -18,6 +17,10 @@ export const AppRoutes: Routes = [
         path: '',
         redirectTo: '/dashboard',
         pathMatch: 'full'
+      },
+      {
+        path: 'security',
+        loadChildren: () => import('./modules/security/security.module').then(m => m.SecurityModule),
       },
       {
         path: '',
