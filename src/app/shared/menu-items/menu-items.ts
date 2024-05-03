@@ -9,6 +9,10 @@ export interface Menu {
 
 const MENUITEMS = [
   { state: 'security', name: 'Seguridad', type: 'link', icon: 'security' },
+  { state: 'genero', name: 'Género', type: 'link', icon: 'voicemail' },
+  { state: 'faqs', name: 'FAQ', type: 'link', icon: 'shield-question-outline-rounded' },
+  { state: 'ofertas', name: 'Ofertas', type: 'link', icon: 'shield-question-outline-rounded' },
+  { state: 'plan', name: 'Planes', type: 'link', icon: 'voicemail' },
   { state: 'dashboard', name: 'Dashboard', type: 'link', icon: 'av_timer' },
   { state: 'button', type: 'link', name: 'Buttons', icon: 'crop_7_5' },
   { state: 'grid', type: 'link', name: 'Grid List', icon: 'view_comfy' },

@@ -1,5 +1,5 @@
 <app-page [showAddBtn]="false" [showRefreshBtn]="false" title="Seguridad">
-  <ng-container filters >
+  <ng-container filters>
     <section class="pl-4 flex flex-row items-center justify-start gap-10">
       <button (click)="restore()" [disabled]=" !changed ? true: null" class="my-2 my-md-0 " color="primary"
         mat-stroked-button>
@@ -24,7 +24,7 @@
             </button>
             <mat-selection-list [multiple]="false" style="max-height: 600px; overflow: auto">
               <div mat-subheader>Grupos</div>
-              <mat-list-option (click)="selectGroup(index)" *ngFor="let group of groups; let index = index"
+              <mat-list (click)="selectGroup(index)" *ngFor="let group of groups; let index = index"
                 [class.selectedGroup]="selectedIndex === index">
                 <div class="flex w-full justify-between items-center">
                   <h3>{{group.name}}</h3>
@@ -35,15 +35,17 @@
                     </button>
                   </div>
                 </div>
-              </mat-list-option>
+              </mat-list>
             </mat-selection-list>
+
           </mat-card-content>
         </mat-card>
       </div>
+
       <div class="col-12 col-md-6">
         <mat-card>
           <mat-card-header>
-            <div class="flex w-full items-center justify-between">
+            <div class="flex w-full items-center justify-between gap-6">
               <mat-checkbox #all (change)="toggleSelectAll($event)" color="primary"
                 style="margin-left: -16px;">{{all.checked ? 'Deseleccionar ' : 'Seleccionar '}} todos
               </mat-checkbox>
@@ -53,7 +55,7 @@
               </mat-form-field>
             </div>
           </mat-card-header>
-          <mat-card-content>
+          <mat-card-content class="pt-0">
             <mat-selection-list #permissionsSelected (selectionChange)="changeSelection()"
               [(ngModel)]="selectedPermissions" style="max-height: 600px; overflow: auto">
               <mat-list-option *ngFor="let permission of filteredPermissions; let index = index" [value]="permission.id"
@@ -62,27 +64,6 @@
           </mat-card-content>
         </mat-card>
       </div>
-      <!-- <mat-card class="permission-card">
-          <mat-card-header>
-            <div class="flex w-full items-center justify-between">
-              <mat-checkbox #all (change)="toggleSelectAll($event)" color="primary"
-                style="margin-left: -16px;">{{all.checked ? 'Deseleccionar ' : 'Seleccionar '}} todos
-              </mat-checkbox>
-              <div class="text-muted font-weight-bold">Permisos</div>
-              <mat-form-field appearance="fill" floatLabel="auto">
-                <mat-label>Filtrar</mat-label>
-                <input [formControl]="permissionFilterControl" matInput type="text">
-              </mat-form-field>
-            </div>
-          </mat-card-header>
-          <mat-card-content>
-            <mat-selection-list #permissionsSelected (selectionChange)="changeSelection()"
-              [(ngModel)]="selectedPermissions" style="max-height: 600px; overflow: auto">
-              <mat-list-option *ngFor="let permission of filteredPermissions; let index = index" [value]="permission.id"
-                checkboxPosition="before" color="primary">{{permission.nombre}}</mat-list-option>
-            </mat-selection-list>
-          </mat-card-content>
-        </mat-card> -->
     </div>
 
   </ng-container>

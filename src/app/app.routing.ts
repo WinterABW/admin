@@ -23,6 +23,22 @@ export const AppRoutes: Routes = [
         loadChildren: () => import('./modules/security/security.module').then(m => m.SecurityModule),
       },
       {
+        path: 'genero',
+        loadChildren: () => import('./modules/genero/genero.module').then(m => m.GeneroModule),
+      },
+      {
+        path: 'faqs',
+        loadChildren: () => import('./modules/faq/faq.module').then(m => m.FaqModule),
+      },
+      {
+        path: 'ofertas',
+        loadChildren: () => import('./modules/offer/offer.module').then(m => m.OfferModule),
+      },
+      {
+        path: 'plan',
+        loadChildren: () => import('./modules/plan/plan.module').then(m => m.PlanModule),
+      },
+      {
         path: '',
         loadChildren:
           () => import('./material-component/material.module').then(m => m.MaterialComponentsModule)

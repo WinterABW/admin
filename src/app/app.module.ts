@@ -18,6 +18,10 @@ import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
 import { LoginComponent } from './components/login/login.component';
 import { TokenInterceptorService } from './services/token-interceptor.service';
+import { NG_ENTITY_SERVICE_CONFIG } from '@datorama/akita-ng-entity-service';
+import { environment } from 'src/environments/environment';
+
+const baseUrl = environment.baseUrl
 
 @NgModule({
   declarations: [
@@ -47,6 +51,10 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     {
       provide: LocationStrategy,
       useClass: PathLocationStrategy
+    },
+    {
+      provide: NG_ENTITY_SERVICE_CONFIG,
+      useValue: baseUrl,
     }
   ],
   bootstrap: [AppComponent]
