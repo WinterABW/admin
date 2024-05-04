@@ -23,6 +23,10 @@ export const AppRoutes: Routes = [
         loadChildren: () => import('./modules/security/security.module').then(m => m.SecurityModule),
       },
       {
+        path: 'tipologias',
+        loadChildren: () => import('./modules/tipologia/tipologia.module').then(m => m.TipologiaModule),
+      },
+      {
         path: 'genero',
         loadChildren: () => import('./modules/genero/genero.module').then(m => m.GeneroModule),
       },
@@ -31,12 +35,35 @@ export const AppRoutes: Routes = [
         loadChildren: () => import('./modules/faq/faq.module').then(m => m.FaqModule),
       },
       {
+        path: 'visitas',
+        loadChildren: () => import('./modules/visita/visita.module').then(m => m.VisitaModule),
+      },
+      {
+        path: 'seller',
+        loadChildren: () => import('./modules/seller/seller.module').then(m => m.SellerModule),
+      },
+      {
+        path: 'logs',
+        loadChildren: () => import('./modules/logs/logs.module').then(m => m.LogsModule),
+      },
+      {
         path: 'ofertas',
         loadChildren: () => import('./modules/offer/offer.module').then(m => m.OfferModule),
       },
       {
+        path: 'portada',
+        loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule),
+      },{
+        path: 'usuarios',
+        loadChildren: () => import('./modules/user/user.module').then(m => m.UserModule),
+      },
+      {
         path: 'plan',
         loadChildren: () => import('./modules/plan/plan.module').then(m => m.PlanModule),
+      },
+      {
+        path: 'user-playlist',
+        loadChildren: () => import('./modules/user-playlist/user-playlist.module').then(m => m.UserPlaylistModule),
       },
       {
         path: '',

@@ -20,6 +20,8 @@ import { LoginComponent } from './components/login/login.component';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { NG_ENTITY_SERVICE_CONFIG } from '@datorama/akita-ng-entity-service';
 import { environment } from 'src/environments/environment';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 
 const baseUrl = environment.baseUrl
 
@@ -55,8 +57,10 @@ const baseUrl = environment.baseUrl
     {
       provide: NG_ENTITY_SERVICE_CONFIG,
       useValue: baseUrl,
-    }
+    },
+    { provide: MAT_DATE_LOCALE, useValue: 'es-CU' },
+    /* { provide: MatPaginatorIntl, useValue: getEsPaginatorIntl() }, */
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
