@@ -11,7 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
   standalone: true,
   imports: [DemoMaterialModule, NgFor, NgIf, RouterModule, CommonModule, MatIconModule],
   templateUrl: './sidebar.component.html',
-  styleUrls: []
+  styleUrls: ['./sidebar.component.scss']
 })
 export class AppSidebarComponent implements OnDestroy, OnInit {
   mobileQuery: MediaQueryList;

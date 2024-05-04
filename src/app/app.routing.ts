@@ -3,6 +3,8 @@ import { Routes } from '@angular/router';
 import { FullComponent } from './layouts/full/full.component';
 import { UnauthGuard } from './guards/unauth.guard';
 import { LoginComponent } from './components/login/login.component';
+import { TermsComponent } from './common/components/terms/terms.component';
+import { AboutComponent } from './common/components/about/about.component';
 
 export const AppRoutes: Routes = [
   {
@@ -79,5 +81,9 @@ export const AppRoutes: Routes = [
         loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
       }
     ]
-  }
+  },
+  {
+    path: 'terms', component: TermsComponent
+  },
+  { path: 'about', component: AboutComponent },
 ];
