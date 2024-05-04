@@ -8,6 +8,7 @@ export interface Menu {
 }
 
 const MENUITEMS = [
+  { state: 'dash', name: 'Dash', type: 'link', icon: 'av_timer' },
   { state: 'security', name: 'Seguridad', type: 'link', icon: 'security' },
   { state: 'genero', name: 'Género', type: 'link', icon: 'voicemail' },
   { state: 'faqs', name: 'FAQ', type: 'link', icon: 'shield-question-outline-rounded' },

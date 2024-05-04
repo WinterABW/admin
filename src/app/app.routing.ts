@@ -66,6 +66,10 @@ export const AppRoutes: Routes = [
         loadChildren: () => import('./modules/user-playlist/user-playlist.module').then(m => m.UserPlaylistModule),
       },
       {
+        path: 'dash',
+        loadChildren: () => import('./modules/dash/dash.module').then(m => m.DashModule),
+      },
+      {
         path: '',
         loadChildren:
           () => import('./material-component/material.module').then(m => m.MaterialComponentsModule)

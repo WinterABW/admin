@@ -2,7 +2,7 @@
   <ng-container filters>
     <form [formGroup]="filters">
       <div class="responsive-section">
-       <!--  <mat-form-field appearance="fill">
+        <!--  <mat-form-field appearance="fill">
           <mat-label>Fecha Inicio</mat-label>
           <input matInput [ngxMatDatetimePicker]="picker" formControlName="fecha__gte">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -36,14 +36,9 @@
             <mat-option [value]="'false'">No me gusta</mat-option>
           </mat-select>
         </mat-form-field>
-        <ng-select (change)="selectPublication($event)" (close)="loadPublicaciones('')"
-                   (search)="searchPub($event)"
-                   [clearSearchOnAdd]="true"
-                   [multiple]="false"
-                   [searchable]="true"
-                   appearance="fill" bindLabel="nombre"
-                   class="w-1/4"
-                   placeholder="Publicaciones">
+        <ng-select (change)="selectPublication($event)" (close)="loadPublicaciones('')" (search)="searchPub($event)"
+          [clearSearchOnAdd]="true" [multiple]="false" [searchable]="true" appearance="fill" bindLabel="nombre"
+          class="w-1/4" placeholder="Publicaciones">
           <ng-option *ngFor="let pub of pubList" [value]="pub">{{pub.nombre}}</ng-option>
         </ng-select>
       </div>
@@ -53,7 +48,7 @@
   <ng-container content>
     <h1 class="mt-4">Total de visitas: <span class="text-muted">{{totalCount}}</span></h1>
 
-   <!--  <mat-progress-bar *ngIf="loaders.get$| async" mode="query"></mat-progress-bar> -->
+    <!--  <mat-progress-bar *ngIf="loaders.get$| async" mode="query"></mat-progress-bar> -->
     <table [dataSource]="votes" class="w-full" mat-table>
       <ng-container matColumnDef="direccion">
         <th *matHeaderCellDef mat-header-cell> Dirección</th>
@@ -83,8 +78,7 @@
         <th *matHeaderCellDef mat-header-cell> Operaciones</th>
         <td *matCellDef="let element" mat-cell>
           <div class="buttons">
-            <button  color="warn" mat-icon-button
-                    matTooltip="Eliminar voto">
+            <button color="warn" mat-icon-button matTooltip="Eliminar voto">
               <mat-icon>delete</mat-icon>
             </button>
           </div>
@@ -97,8 +91,8 @@
         <td class="mat-cell" class="text-center" colspan="3">Sin datos</td>
       </tr>
     </table>
-    <mat-paginator #matPaginator (page)="paginate($event)" [length]="totalCount"
-                   [pageSizeOptions]="[10, 30, 50, 75]" [pageSize]="10" showFirstLastButtons>
+    <mat-paginator #matPaginator (page)="paginate($event)" [length]="totalCount" [pageSizeOptions]="[10, 30, 50, 75]"
+      [pageSize]="10" showFirstLastButtons>
     </mat-paginator>
   </ng-container>
 </app-page>

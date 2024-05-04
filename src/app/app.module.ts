@@ -31,7 +31,7 @@ const baseUrl = environment.baseUrl
     FullComponent,
     AppHeaderComponent,
     SpinnerComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
